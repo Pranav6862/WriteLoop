@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+.env.local
+.env.*
+
+# Build outputs
+dist/
+build/
+.next/
+
+# IDE and OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
