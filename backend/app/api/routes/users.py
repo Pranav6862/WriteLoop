@@ -6,6 +6,7 @@ from app.api import deps
 from app.core.security import get_password_hash
 from app.db import models
 from app.schemas import User, UserCreate, UserUpdate
+from app.services.email_service import send_verification_email
 
 router = APIRouter()
 
@@ -33,10 +34,7 @@ def create_user(
     db.commit()
     db.refresh(user)
     
-    print("\n" + "="*50)
-    print(f"VERIFICATION LINK FOR {user.email}:")
-    print(f"http://localhost:3000/verify-email?token={token}")
-    print("="*50 + "\n")
+    send_verification_email(user.email, token)
     
     return user
 
