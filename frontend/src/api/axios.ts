@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useAuthStore } from '../store/authStore';
 
 const api = axios.create({
-  baseURL: '/api/v1',
+  baseURL: 'https://writeloop.onrender.com/api/v1',
 });
 
 api.interceptors.request.use((config) => {
