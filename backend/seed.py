@@ -73,6 +73,45 @@ def seed_db():
                 {"name": "audience", "label": "Target Audience", "type": "text"},
                 {"name": "benefits", "label": "Key Benefits", "type": "textarea"}
             ]
+        },
+        {
+            "name": "Instagram Caption",
+            "description": "Write a catchy Instagram caption.",
+            "category": "Social Media",
+            "prompt_template": "Write a catchy, highly engaging Instagram caption about {topic}. The mood should be {mood}. Include relevant emojis and 5 popular hashtags.",
+            "inputs": [
+                {"name": "topic", "label": "Topic or Photo Subject", "type": "text"},
+                {"name": "mood", "label": "Mood / Tone", "type": "text"}
+            ]
+        },
+        {
+            "name": "YouTube Video Idea",
+            "description": "Brainstorm a viral YouTube video concept.",
+            "category": "Content Strategy",
+            "prompt_template": "Brainstorm a highly clickable, viral YouTube video idea for the {niche} niche. The video format should be {format}. Include a catchy title and a brief outline of the intro, body, and outro.",
+            "inputs": [
+                {"name": "niche", "label": "Channel Niche", "type": "text"},
+                {"name": "format", "label": "Video Format (e.g., Vlog, Tutorial)", "type": "text"}
+            ]
+        },
+        {
+            "name": "LinkedIn Outreach",
+            "description": "Write a cold outreach message for LinkedIn.",
+            "category": "Emails",
+            "prompt_template": "Write a professional, non-spammy LinkedIn cold outreach message to someone whose role is {prospect_role}. Introduce my product which provides this value: {product_value}. Keep it under 100 words and end with a soft call to action.",
+            "inputs": [
+                {"name": "prospect_role", "label": "Prospect's Job Role", "type": "text"},
+                {"name": "product_value", "label": "Value of your Product", "type": "textarea"}
+            ]
+        },
+        {
+            "name": "Recipe Generator",
+            "description": "Create a recipe based on ingredients.",
+            "category": "Fun",
+            "prompt_template": "Create a delicious recipe using only these ingredients (plus basic pantry staples like oil/salt): {ingredients}. Provide step-by-step instructions and a creative name for the dish.",
+            "inputs": [
+                {"name": "ingredients", "label": "List of Ingredients", "type": "textarea"}
+            ]
         }
     ]
 
