@@ -17,7 +17,7 @@ def send_verification_email(to_email: str, token: str):
     msg['From'] = settings.SMTP_USER
     msg['To'] = to_email
 
-    verification_link = f"https://write-loop-2za90xjjn-pranav-s-projects88.vercel.app/verify-email?token={token}"
+    verification_link = f"https://write-loop.vercel.app/verify-email?token={token}"
 
     html_content = f"""
     <html>
@@ -47,5 +47,5 @@ def send_verification_email(to_email: str, token: str):
         # Print link to console as a fallback
         print("\n" + "="*50)
         print(f"VERIFICATION LINK FOR {to_email}:")
-        print(f"https://write-loop-2za90xjjn-pranav-s-projects88.vercel.app/verify-email?token={token}")
+        print(f"https://write-loop.vercel.app/verify-email?token={token}")
         print("="*50 + "\n")
