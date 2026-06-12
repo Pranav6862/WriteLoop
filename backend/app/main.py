@@ -4,9 +4,14 @@ from app.api.routes import auth, users, content, templates, analytics
 from app.core.config import settings
 from app.db.database import engine
 from app.db import models
+from seed import seed_db
 
-# Create tables
+# Create tables and seed data
 models.Base.metadata.create_all(bind=engine)
+try:
+    seed_db()
+except Exception as e:
+    print(f"Error seeding database: {e}")
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
