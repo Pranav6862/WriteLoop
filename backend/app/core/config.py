@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "AI Content Gen SaaS"
+    PROJECT_NAME: str = "WriteLoop SaaS"
     API_V1_STR: str = "/api/v1"
     SECRET_KEY: str = "db67dc6b4d522d51e83bab8c3fc60f3e66e9e7f1ebaed478f5e381c5a79ee0c3"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8 # 8 days
