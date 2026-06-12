@@ -9,6 +9,7 @@ const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [fullName, setFullName] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -18,7 +19,7 @@ const RegisterPage = () => {
     setLoading(true);
     try {
       await api.post('/users/', { email, password, full_name: fullName });
-      navigate('/login');
+      setSuccess(true);
     } catch (err) {
       const errorResponse = err as any;
       setError(errorResponse.response?.data?.detail || 'An error occurred');
@@ -61,6 +62,27 @@ const RegisterPage = () => {
                     className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >
                     Dismiss
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {success && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                <div className="bg-white rounded-lg p-6 max-w-sm w-full mx-4 shadow-xl">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-100 mx-auto mb-4">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-medium text-center text-gray-900 mb-2">Check Your Email!</h3>
+                  <p className="text-sm text-center text-gray-500 mb-6">A verification link has been sent to your email. Please verify your account before logging in.</p>
+                  <button
+                    onClick={() => navigate('/login')}
+                    type="button"
+                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                  >
+                    Go to Login
                   </button>
                 </div>
               </div>
