@@ -7,8 +7,10 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8 # 8 days
     DATABASE_URL: str = "postgresql://pranav@localhost:5432/saas_db"
     OPENAI_API_KEY: str = "sk-placeholder"
-    SMTP_USER: str = ""
-    SMTP_PASSWORD: str = ""
+    EMAILJS_SERVICE_ID: str = ""
+    EMAILJS_TEMPLATE_ID: str = ""
+    EMAILJS_PUBLIC_KEY: str = ""
+    EMAILJS_PRIVATE_KEY: str = ""
 
     class Config:
         case_sensitive = True
