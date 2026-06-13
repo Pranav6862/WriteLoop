@@ -45,7 +45,7 @@ const LoginPage = () => {
         <p className="mt-2 text-center text-sm text-gray-600">
           Or{' '}
           <Link to="/register" className="font-medium text-blue-600 hover:text-blue-500">
-            start your 14-day free trial
+            create a free account
           </Link>
         </p>
       </div>
