@@ -44,7 +44,7 @@ const MainLayout = () => {
       <div className="w-64 bg-white border-r border-gray-200 flex flex-col fixed h-full">
         <div className="h-16 flex items-center px-6 border-b border-gray-200">
           <PenTool className="text-blue-600 w-6 h-6 mr-2" />
-          <span className="font-bold text-xl">ContentAI</span>
+          <span className="font-bold text-xl">WriteLoop</span>
         </div>
         
         <nav className="flex-1 px-4 py-6 space-y-1">
