@@ -40,8 +40,8 @@ const LandingPage = () => {
               <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
                 <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Lightning Fast</h3>
-              <p className="text-gray-500">Generate high-quality content in seconds, not hours. Our advanced AI models are optimized for speed.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">100% Free to Use</h3>
+              <p className="text-gray-500">Access powerful AI generation without spending a dime. No credit card required, just create an account and start writing.</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
               <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6">
